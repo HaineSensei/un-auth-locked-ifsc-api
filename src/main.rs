@@ -70,7 +70,6 @@ async fn api_proxy(_req: HttpRequest, path: web::Path<String>) -> Result<HttpRes
         .header("Referer", "https://ifsc.results.info/")
         .header("Sec-Fetch-Site", "same-origin")
         .header("Sec-Fetch-Mode", "cors")
-        .header("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36")
         .send()
         .await
         .map_err(|e| {
